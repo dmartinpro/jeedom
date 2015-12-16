@@ -12,18 +12,18 @@ Thanks to Jeedom's Market and the plugin system, Jeedom can be linked to any con
 
 Multilingual, Jeedom software is already in English language and can be translated easily. Through its customizable interface, widgets, views, plugins and user management, each user can create its own view on Jeedom to realize own wishes unique automation installation.
 
-[![Jeedom Logo] (http://jeedom.fr/images/jeedom.jpg)] (http://jeedom.fr/index.php)
+[![Jeedom Logo] (https://jeedom.fr/site/logo.png)] (http://jeedom.fr/)
 
-[Jeedom Software] (http://jeedom.fr/index.php)
+[Jeedom Software] (http://jeedom.fr/)
 
 #How to use this image
 
 This image in all in one container with mysql, nginx, nodejs, ssh, php and cron :
 
 ```
-docker run -d -p 80:80 -p 22:22 -p 8070:8070 -p 9001:9001 cquad/jeedom
+docker run -d -p 80:80 -p 443:443 -p 22:22 -p 8070:8070 -p 9001:9001 -p 10000:10000 cquad/jeedom
 ```
 # Best practices
 
-If you want top apply docker best practices, it 's better to launch all theses service in distinct container. See [Jeedom distinct container] (https://registry.hub.docker.com/u/cquad/jeedom-web/)
+If you want top apply docker best practices, it's better to launch all theses service in distinct container. See [Jeedom distinct container] (https://registry.hub.docker.com/u/cquad/jeedom-web/)
 
