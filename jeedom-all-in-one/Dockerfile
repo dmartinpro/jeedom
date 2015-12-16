@@ -1,6 +1,6 @@
-FROM debian:jessie
+FROM sdhibit/rpi-raspbian:latest
 
-MAINTAINER cedric.olivier@free.fr
+MAINTAINER martindavid@free.fr
 
 ENV JEEDOM_DB_HOST localhost
 ENV JEEDOM_DB_PASSWORD jeedom
