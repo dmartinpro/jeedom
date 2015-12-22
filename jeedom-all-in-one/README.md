@@ -20,9 +20,33 @@ Multilingual, Jeedom software is already in English language and can be translat
 
 This image in all in one container with mysql, nginx, nodejs, ssh, php and cron :
 
+Install Docker
+Check for the latest version available: http://blog.hypriot.com/downloads/
+Get it and set it up:
 ```
-docker run -d -p 80:80 -p 443:443 -p 22:22 -p 8070:8070 -p 9001:9001 -p 10000:10000 cquad/jeedom
+ wget http://downloads.hypriot.com/docker-hypriot_1.9.1-1_armhf.deb
+ sudo dpkg -i docker-hypriot_1.9.1-1_armhf.deb
 ```
+
+Now, build the image (this is long, the image will be uploaded soon)
+Then run it.
+
+```
+sudo docker build -t jeedom .
+docker run -d -p 80:80 -p 22:22 -p 8070:8070 -p 9001:9001 -p 10000:10000 jeedom
+```
+
+You may run out of inodes. Check using this command :
+```
+sudo df -i
+```
+
+If running low, clean unused files.
+```
+sudo docker rm CID
+sudo docker rmi IMAGE
+```
+
 # Best practices
 
 If you want top apply docker best practices, it's better to launch all theses service in distinct container. See [Jeedom distinct container] (https://registry.hub.docker.com/u/cquad/jeedom-web/)
